@@ -1,0 +1,14 @@
+<p>driver works!</p>
+
+<h2>Ride Requests</h2>
+
+<ul *ngIf="!rideAccepted">
+  <li *ngFor="let ride of rides | async">
+    {{ ride.location }}
+    <button (click)="acceptRide(ride)">Accept</button>
+  </li>
+</ul>
+
+<div *ngIf="rideAccepted">
+  <h2>Ride Accepted and Completed</h2>
+</div>

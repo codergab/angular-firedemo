@@ -1,0 +1,7 @@
+<div>
+  <p>rider works!</p>
+  <input type="text" name="submit" [(ngModel)]="location" />
+  <button type="submit" (click)="requestRide()">Request Ride</button>
+
+  <p style="color: green;" *ngIf="rideSent">You ride has been sent</p>
+</div>
